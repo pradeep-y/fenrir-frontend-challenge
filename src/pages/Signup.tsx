@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Signup() {
+    const navigate = useNavigate();
   return (
     <div className="min-h-screen flex flex-col lg:flex-row bg-gradient-to-br from-[#071c1f] via-[#0a2f33] to-[#ff6a00]">
 
@@ -39,9 +42,12 @@ export default function Signup() {
             <Input placeholder="Email address*" />
             <Input placeholder="Password*" type="password" />
 
-            <button className="w-full bg-teal-600 hover:bg-teal-700 text-white py-3 rounded-xl font-medium transition">
-              Create account
-            </button>
+<button
+  onClick={() => navigate("/dashboard")}
+  className="w-full bg-teal-600 hover:bg-teal-700 text-white py-3 rounded-xl font-medium transition"
+>
+  Create account
+</button>
 
           </div>
 
